@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 20:40:27 by dnahon            #+#    #+#             */
-/*   Updated: 2025/08/11 15:49:10 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/08/12 03:04:55 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,16 @@ static void	shell_main_loop(t_env *env)
 	char	**input;
 	int		i;
 	int		signal_received;
+	char	*raw_input;
 
 	while (1)
 	{
 		setup_interactive_signals();
-		i = -1;
-		input = ft_split_arena(env->arena, get_prompt_and_input(), '\n');
+		t((i = -1, raw_input = get_prompt_and_input(), 0));
+		input = ft_split_arena(env->arena, raw_input, '\n');
 		if (!input)
 			t((write(1, "exit\n", 6), exit2(env), 0));
+		free(raw_input);
 		while (input[++i])
 		{
 			if (input[i])

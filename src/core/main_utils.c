@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 19:00:00 by dnahon            #+#    #+#             */
-/*   Updated: 2025/08/02 21:33:29 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/08/12 03:06:30 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /**
  * Affiche un texte avec un dégradé de couleurs pour créer un effet visuel.
- *
- * Cette fonction applique un dégradé de couleurs RGB sur un tableau de chaînes
+ * Cette fonction applique un dégradé de
+ * couleurs RGB sur un tableau de chaînes
  * pour créer un effet visuel attrayant lors de l'affichage:
  * - Calcule la largeur maximale du texte
  * - Applique des couleurs dégradées caractère par caractère
@@ -180,7 +180,8 @@ char	*get_prompt_and_input(void)
 }
 
 /**
- * Génère une nouvelle couleur pour le prompt en cyclant à travers une palette.
+
+	* Génère une nouvelle couleur pour le prompt en cyclant à travers une palette.
  *
  * Cette fonction utilise une palette prédéfinie de couleurs et retourne
  * une nouvelle couleur à chaque appel pour varier l'apparence du prompt:
